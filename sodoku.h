@@ -7,47 +7,47 @@
 
 class SDK
 {
-	public:
-		SDK()
+public:
+	SDK()
+	{
+		for(unsigned int i=0; i<81; i++)
 		{
-				for(unsigned int i=0; i<81; i++)
-				{
-					cell[i] = new Cell();
-				}
-				_ck = Check();
+			cell[i] = new Cell();
 		}
+		_ck = Check();
+	}
 		
-		~SDK()
+	~SDK()
+	{
+		for(unsigned int i=0; i<81; i++)
 		{
-				for(unsigned int i=0; i<81; i++)
-				{
-					delete cell[i];
-				}
+			delete cell[i];
 		}
+	}
 		
-	public:
-		void init_from_file();
-		void disp_cells();
+public:
+	void init_from_file();
+	void disp_cells();
 
-		int write(int row, int col, int val);
-		int gameover();
+	int write(int row, int col, int val);
+	int gameover();
 		
-	private:
-		void set_cell(int index, int val);
+private:
+	void set_cell(int index, int val);
 		
-		int check(int row, int col, int val);
-		int check_row(int row, int val);
-		int check_col(int col, int val);
-		int check_block(int row, int col, int val);
+	int check(int row, int col, int val);
+	int check_row(int row, int val);
+	int check_col(int col, int val);
+	int check_block(int row, int col, int val);
 
-		int getcell_index(int row,int col);
-		int getcellsofrow(int row);
-		int getcellsofcol(int col);
-		int getcellsofblock(int row, int col);
-
-	private:
-		Cell * cell[81];
-		Check  _ck;
+	int getcell_index(int row,int col);
+	int getcellsofrow(int row);
+	int getcellsofcol(int col);
+	int getcellsofblock(int row, int col);
+	
+private:
+	Cell * cell[81];
+	Check  _ck;
 };
 
 #endif

@@ -36,10 +36,10 @@ int Check::todo(int val)
 	for(i=0; i<_i; i++)
 	{
 		//printf("%d:%d,",i,val);
-			if(_a[i] == val)
-			{
-				return -1;
-			}
+		if(_a[i] == val)
+		{
+			return -1;
+		}
 	}
 	//printf("\n");
 	return 0;

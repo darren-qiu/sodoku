@@ -87,11 +87,11 @@ void SDK::set_cell(int index, int val)
 int SDK::check(int r, int c, int val)
 {
 	if(0 != check_row(r,val))
-	  return -1;
+		return -1;
 	if(0 != check_col(c,val))
-	  return -2;
+		return -2;
 	if(0 != check_block(r,c,val))
-	  return -3;
+		return -3;
 	return 0;
 }
 

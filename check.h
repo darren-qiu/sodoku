@@ -3,28 +3,27 @@
 
 class Check
 {
-	public:
-		Check() 
+public:
+	Check() 
+	{	
+		for(unsigned int i=0; i<9; i++)
 		{
-		    for(unsigned int i=0; i<9; i++)
-			      {
-					          this->_a[i] = 0;
-							      }
-
-			    this->_i = 0;
+			this->_a[i] = 0;
 		}
+	    this->_i = 0;
+	}
 
-		~Check() {}
+	~Check() {}
 		
-		void clear();
-		int add(int a);
-		int todo(int val);
-		int valid(int a);
+	void clear();
+	int add(int a);
+	int todo(int val);
+	int valid(int a);
 		
-	private:
-		int _a[9];
-		int _i;
+private:
+	int _a[9];
+	int _i;
 };
 
 #endif
-
+ 

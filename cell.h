@@ -2,7 +2,7 @@
 #define _SDK_CELL_
 
 class Cell
-{
+{ 
 	public:
 		Cell():row(-1),col(-1),block(-1),value(-1),flag(-1)
 		{}

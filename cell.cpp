@@ -50,4 +50,4 @@ int Cell::getFlag()
 {
 	return this->flag;
 }
-
+ 
